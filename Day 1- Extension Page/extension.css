@@ -1,0 +1,206 @@
+body{
+    background-color: hsl(227, 75%, 14%);
+    height: 100vh;
+    margin: 40px;/*this is the correct way to give the margin to get apply on the overall page  equally and if we give styling even here instaed of outfit it will work*/
+    font-family: Noto Sans;
+    color: white;
+}
+.outfit{
+    display: flex;
+    /*justify-content: center;
+    align-items: center; this set is not required because if l giving this entire stuff is reflecting in the center of the page*/
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+.searchsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchbar{
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: hsl(225, 23%, 24%);
+    border: none;
+}
+.logoextension{
+    position: absolute;
+    left: 60px;
+}
+.sun{
+    position: absolute;
+    right: 60px;
+    background-color: hsl(226, 11%, 37%);
+    padding: 10px;
+    border-radius: 5px;
+}
+.headingpart{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.heading h1{
+    letter-spacing: 1px;
+}
+.status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.butfun{
+    background-color: hsl(225, 23%, 24%);
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    padding: 5px;
+
+}
+.butfun:hover{
+    background-color: hsl(3, 71%, 56%);
+    color: black;
+}
+.bottompart{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.threebox{
+    display: flex;
+    flex-direction: row;
+    /*gap: 10px; no use in providing this*/ 
+}
+.insidebox{
+    background-color: hsl(225, 23%, 24%);
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.images{
+    width: 50px;
+    height: 50px;
+}
+.boxheading{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.boxheadingmatter{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.boxheadingmatter p{
+    margin-top: -20px;
+}
+.lastpartofbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.lastbut{
+    background-color: hsl(226, 25%, 17%);
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.checking{
+    display: flex;
+    justify-content: space-evenly;
+}
+.boxheadingmatter p{
+    font-size: 14px;
+    color: grey;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #f65b5b;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(16px);
+}
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light-mode .insidebox {
+  background-color: #ffffff;
+}
+
+body.light-mode .searchbar {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+body.light-mode .butfun {
+  background-color: white;
+  color: #000;
+}
+
+body.light-mode .lastbut {
+  background-color: white;
+  color: #000;
+}
+
+body.light-mode .slider {
+  background-color: #999;
+}
+
+body.light-mode .slider::before {
+  background-color: #fff;
+}
+
+/*https://chatgpt.com/c/6837541f-07d4-8006-a0ae-c3eb8666fe16*/
