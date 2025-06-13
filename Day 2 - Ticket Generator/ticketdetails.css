@@ -1,0 +1,98 @@
+body{
+    margin: 0px;
+    /*display: flex;
+    justify-content: center;
+    flex-direction: column;*//*for this page these were not working here because if any thing we want to place as background and the content that then only this will work*/
+    background-image: url("./conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-desktop.svg") , url("./conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg"),url("./conference-ticket-generator-main/assets/images/background-desktop.png");;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom left, top right,center;
+   /* background-size: bottom(100px), top(100px), cover; the syntax is wrong*/
+   background-size: 900px, 600px, cover;
+   font-family: open sans;
+   height: 100vh;
+}
+main{
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.journey{
+    margin-top: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: 600px;
+    letter-spacing: 0.8px;
+}
+.ticket_page{
+    color: white;
+}
+.mailcolor{
+    color: orange;
+}
+.ticket{
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.logoinpage{
+    width: 200px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.inticket{
+    position: absolute;
+    right: 44%;
+    top: 50%;
+    margin-bottom: 0px;
+    text-align: left;
+}
+.profilepic{
+    width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.persondetails{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mainandlogo{
+    display: flex;
+    flex-direction: row;
+    margin-top: -25px;
+    gap: 10px;
+}
+.datelocation{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: white;
+}
+.nameofticket{
+    text-transform: capitalize;
+}
+.nameofuser{
+    color: orange;
+    text-transform: capitalize;
+}
+.ticket-code {
+  position: absolute;
+  right: -40%;
+  top: 38%;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: center;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}

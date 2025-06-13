@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Generator Page</title>
+        <link href="./ticket.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main class="outfit">
+            <div class="heading part">
+                <img src="./conference-ticket-generator-main/assets/images/logo-full.svg" class="logo">
+                <!--<h2>Coding Conf</h2>-->
+            </div>
+            <div class="innerbody">
+                <h1 class="journey">Your Journey to Coding Conf<br>2025 Stars Here</h1>
+                <p class="ptag">Secure your spot at next year's biggest coding conference</p>
+                <form class="details">
+                    <label class="leftside">Upload Avatar</label>
+                    <input type="file" class="upload_image" id="avatar" accept="image/png, image/jpg">
+                    <div class="avatar">
+                        <img src="./conference-ticket-generator-main/assets/images/icon-upload.svg" class="uploadimage">
+                        <p class="inimagebox">Drag and drop or click to upload</p>
+                    </div>
+                    <p class="context">Upload your photo(JPG or PNG, max size: 500kB)</p>
+                    <label class="leftside" >Full Name</label>
+                    <input type="text" class="box" id="fullname">
+                    <p class="errordes" id="fn_errdes">Give the proper full name</p>
+                    <label class="leftside" >Email Address</label>
+                    <input type="email" placeholder="example@email.com" class="box" id="mailaddress">
+                    <p class="errordes" id="gmail_errdes">Give the proper gmailId</p>
+                    <label class="leftside" > GitHub Username</label>
+                    <input type="text" class="box" placeholder="@yourusername" id="githubid">
+                    <p class="errordes" id="github_errdes" >Give the proper github account</p>
+                </form>
+                <button class="submit" onclick="submission()">Generate My Ticket</button>
+            </div>
+        </main>
+    </body>
+    <script>
+      let submission = () =>{
+        const full_name = document.getElementById("fullname").value; /*get the firstname given by the user */
+        const email_address = document.getElementById("mailaddress").value;/*get the emailaddress given by the user*/
+        const github_account = document.getElementById("githubid").value;/*get the githubid given by user*/
+        const first_error = document.getElementById("fn_errdes");/*stores the description for the first name error*/
+        const gmail_error = document.getElementById("gmail_errdes");/*stores the description for the gmail error*/
+        const github_error = document.getElementById("github_errdes");/*stores the description for the github error */
+        const avatarInput = document.getElementById("avatar");
+        const reader = new FileReader();
+        if(
+
+            full_name.trim() !== "" &&
+            email_address.endsWith("@gmail.com") &&
+            github_account.trim() !== "")
+       {
+            window.location.href = "./ticket.html";
+        }
+        else{
+            first_error.style.display = "block";
+            gmail_error.style.display = "block";
+            github_error.style.display = "block";
+        }
+        reader.onload = ()=>{
+            localStorage.setItem("useravatar", reader.result);
+            window.location.href = "./ticket.html";
+        }
+        if (avatarInput.files[0]){
+            reader.readAsDataURL(avatarInput.files[0]);
+        }else{
+            localStorage.setItem("useavatar", "/conference-ticket-generator-main/assets/images/image-avatar.jpg");
+            window.location.href = "./ticket.html";
+        }
+        localStorage.setItem("username", full_name);
+        localStorage.setItem("usergmail", email_address);
+        localStorage.setItem("usergithub", github_account);
+      }
+    </script>
+</html>
