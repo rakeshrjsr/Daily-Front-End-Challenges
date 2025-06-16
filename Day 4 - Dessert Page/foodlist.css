@@ -1,0 +1,117 @@
+body{
+    height: 100vh;
+    margin: 30px 20px 30px 20px;
+    background-color:hsl(13, 31%, 94%);
+    font-family: RedHatText;
+}
+main{
+    position: relative;
+}
+.img{
+    width: 90%;
+    height: auto;
+    position: relative;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+.itemname{
+    color: grey;
+    margin-top: 40px;
+}
+.itemwithcustom{
+    font-size: 15px;
+    margin-top: 0px;
+}
+.cost{
+    font-size: 15px;
+    color: hsl(14, 86%, 42%);
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.addtocart{
+    position: absolute;
+    text-align: center;
+}
+.butadd{
+    border-radius: 8px;
+    border: 2px solid hsl(14, 86%, 42%) ;
+    background-color: white;
+    margin: auto;
+    padding: 6px;
+}
+.firstbox,
+.secondbox,
+.thirdbox,
+.secrowfirstbox,
+.secrowsecondbox,
+.secrowthirdbox,
+.thridrowfirstbox,
+.thirdrowsecondbox,
+.thirdrowthirdbox {
+    position: relative;
+}
+.addtocart {
+    position: absolute;
+    top: 65%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+.cartsection{
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+}
+.orderconfirmed{
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 40%;
+}
+.ordereditems{
+    background-color: antiquewhite;
+    border-radius: 12px;
+    padding: 20px;
+}
+.boxone{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.thumb{
+    width: 15%;
+    height: auto;
+}
+.quanity{
+    display: flex;
+    gap: 20px;
+}
+.boxoneof{
+    display: flex;
+    justify-content: space-between;
+}
+.itemcost {
+  flex: 1;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 100, 255, 0.2);
+  backdrop-filter: blur(5px); /* This blurs *behind* */
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  
+}
+.setnone{
+    display: none;
+}
