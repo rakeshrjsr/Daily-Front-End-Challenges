@@ -1,0 +1,154 @@
+body{
+    background-color: hsl(202, 86%, 94%) !important;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outfit{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 13px;
+    overflow: hidden;
+    background-color: white;
+
+}
+.leftside{
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+   /* border-radius: 12px; giving here is breaking the layout*/
+    overflow: hidden;
+}
+.rightside{
+    background-color: hsl(202, 55%, 16%);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    /*border-radius: 12px;* giving here is breaking the layout*/
+    border-bottom-left-radius: 90px ;
+}
+.mainheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.mainheader h3{
+    font-size: 20px;
+}
+.mainheader p{
+    text-decoration: underline;
+    color: grey;
+}
+.mortageamount{
+    display: flex;
+    width: 425px;
+    border: 2px solid black;/*why l am adding border here means because in the input type l am going to remove the border to mix the both elements into one place*/
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.pound{
+    background-color: hsl(202, 86%, 94%);
+    padding: 10px 15px 10px 10px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px ;
+    border-right: 2px solid black;
+}
+.amount{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+.term-rate{
+    display: flex;
+    margin-bottom: 15px;
+}
+.years,.percentage{
+    border: 2px solid black;
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+.terms{
+    width: 165px;
+    border: none;
+    outline: none;
+}
+.styleyear,.per{
+    background-color: hsl(202, 86%, 94%);
+    border-left: 2px solid black;
+    padding: 2px 3px 2px 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.inbox{
+ border: 2px solid black;   
+}
+.option-box{
+    margin-bottom: 15px;
+    border: 2px solid black;
+    width: 430px;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+.butfun{
+    margin: auto;
+    background-color: hsl(61, 70%, 52%);
+    border-radius: 25px;
+    padding: 8px 13px 8px 13px;
+    border: none;
+    cursor: pointer;
+}
+.empty{
+    margin-top: 10%;
+}
+.common.active .pound,
+.common.active .styleyear,
+.common.active .per, 
+.common.active.pound{
+  background-color: hsl(61, 70%, 52%);
+}/*this is new that l have learnt today*/
+.common.active.mortageamount,
+.common.active.years,
+.common.active.percentage,
+.common.active.option-box{
+    border: 2px solid  hsl(61, 70%, 52%);;
+}/*this is also new that l have learnt today*/
+input[type="radio"]{
+    accent-color: hsl(61, 70%, 52%);/*this is new that l have learnt today*/
+}
+.error{
+    display: none;
+    color: red;
+    margin-top: 10px;
+}
+.matterofright{
+    display: block;
+}
+.resulting, .yearlyresult{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3px;
+}
+.resulting{
+    color: hsl(61, 70%, 52%);
+    font-size: 45px;
+}
+.result{
+    background-color:black;
+    padding: 20px;
+    border-radius: 15px;
+    border-top: 2px solid hsl(61, 70%, 52%);
+    text-align: left;
+}
+.reload{
+    cursor: pointer;
+}
+/*https://chatgpt.com/c/684ddf4c-6500-8006-8be3-5d8c334c7d5c*/
+/*https://chatgpt.com/c/68506e59-7948-8006-886f-14afaab18c01*/
