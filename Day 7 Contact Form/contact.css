@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(148, 38%, 91%);
+    font-family: karla;
+}
+.outfit{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    height: auto;
+    padding: 20px 20px 20px 20px;
+    width: 600px;
+}
+.namefield{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.firstname,.lastname{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.firstnamebox,.lastnamebox{
+    width: 290px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.emailwidth{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.enquirytype{
+    display: flex;
+    gap: 20px;
+    margin: 10px 0 10px 0;
+}
+.general,.support{
+    padding: 10px;
+    border: 2px solid black;
+    width: 290px;
+    border-radius: 5px;
+}
+.bigbox{
+    margin: 10px 0px 10px 0px;
+    height: 65px;
+    width: 600px;
+    border-radius: 5px;
+}
+.checkboxer{
+    margin: 5px 0 10px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+}
+button{
+    width: 600px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 20px;
+    background-color: hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+.star{
+    color: hsl(186, 15%, 59%);
+}
+.error{
+    display: none;
+}
+.firstnamebox:hover,.lastnamebox:hover,.emailwidth:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+.general:hover,.support:hover{
+    border:2px solid hsl(169, 82%, 27%);
+    background-color: #e9f7ef;
+    cursor: pointer;
+}
+  input[type="radio"] {
+      background-color: #d1e7dd;
+      border-color: #1b4332;
+      color: #1b4332;
+      font-weight: bold;
+    }
