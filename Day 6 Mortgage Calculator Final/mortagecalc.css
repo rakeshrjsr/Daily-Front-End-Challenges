@@ -150,5 +150,10 @@ input[type="radio"]{
 .reload{
     cursor: pointer;
 }
-/*https://chatgpt.com/c/684ddf4c-6500-8006-8be3-5d8c334c7d5c*/
-/*https://chatgpt.com/c/68506e59-7948-8006-886f-14afaab18c01*/
+.inputfield_err{
+    border: 2px solid hsl(4, 69%, 50%);
+}
+.back{
+    background-color: hsl(4, 69%, 50%);
+    color: white;
+}

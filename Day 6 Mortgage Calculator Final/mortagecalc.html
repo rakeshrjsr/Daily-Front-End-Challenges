@@ -14,25 +14,25 @@
                         <p class="reload" id="reloading">Clear All</p>
                     </div><!--closure of mainheader-->
                     <lable>Mortage Amount</lable>
-                    <div class="mortageamount common">
-                        <span class="pound">£</span>
+                    <div class="mortageamount common" id="errormor">
+                        <span class="pound" id="pounding">£</span>
                         <input type="text" class="amount" id="usergiven_pounds">
                     </div><!--closure of mortage amount-->
                     <p class="error" id="erramount">Give the valid input which is number</p>
                     <div class="term-rate"><!--here l will give flexing as column-->
                         <div class="flexing">
                             <lable>Mortage Term</lable>
-                            <div class="years common"><!--this one is also as flex only row-->
+                            <div class="years common" id="yearone"><!--this one is also as flex only row-->
                                 <input type="text" class="terms" id="usergiven_term">
-                                <span class="styleyear">years</span>
+                                <span class="styleyear" id="yearbackone">years</span>
                             </div><!--closure of years-->
                             <p class="error" id="erryear">Give the valid input</p>
                         </div><!--closure of flexing-->
                         <div class="flexingtwo">
                             <lable>Interest Rate</lable>
-                            <div class="percentage common"><!--this one is also as flex only row-->
+                            <div class="percentage common" id="yeartwo"><!--this one is also as flex only row-->
                                 <input type="text" class="terms" id="usergiven_per">
-                                <span class="per">%</span>
+                                <span class="per" id="yearbacktwo">%</span>
                             </div><!--closure of percentage-->
                             <p class="error" id="errpercentage">Give the valid Input</p>
                         </div><!--closure of flexing tow-->
@@ -115,24 +115,36 @@
         
         if (isNaN(amount_pound)){
             erro_amount.style.display = "block";
+            document.getElementById("errormor").classList.add("inputfield_err");
+            document.getElementById("pounding").classList.add("back");
             haserror = true;
         }
         else{
             erro_amount.style.display = "none";
+            document.getElementById("errormor").classList.remove("inputfield_err");
+            document.getElementById("pounding").classList.remove("back");
         }
          if (isNaN(num_term)){
             erro_year.style.display = "block";
+            document.getElementById("yearone").classList.add("inputfield_err");
+             document.getElementById("yearbackone").classList.add("back");
             haserror = true;
         }
         else{
             erro_year.style.display = "none";
+            document.getElementById("yearone").classList.remove("inputfield_err");
+             document.getElementById("yearbackone").classList.remove("back");
         }
          if (isNaN(num_per)){
             erro_percentage.style.display = "block";
+            document.getElementById("yeartwo").classList.add("inputfield_err");
+            document.getElementById("yearbacktwo").classList.add("back");
             haserror = true;
         }
         else{
             erro_percentage.style.display = "none"
+            document.getElementById("yeartwo").classList.remove("inputfield_err");
+             document.getElementById("yearbacktwo").classList.remove("back");
         }
         if (haserror) return;
         none_right.style.display = "none";
