@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Contact Form</title>
+        <link href="contact.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="popup" id="popupmatter">
+            <h3>Message Sent</h3>
+            <p>Thanks for sending the form we will be in touch with you!</p>
+        </div>
+        <div class="outfit">
+            <h1>Contact Us</h1>
+            <div class="namefield"><!--we are giving flex functionalties here as row-->
+                <div class="firstname"><!--here also we are flex functionalties but as column-->
+                    <label>First name <span class="star">*</span></label>
+                    <input type="text" class="firstnamebox" id="first_name">
+                    <p class="error" id="erroroffirstname">This field is required</p>
+                </div>
+                <div class="lastname"><!--we are giving flex functionalities here as column-->
+                    <lable>Last Name <span class="star">*</span></lable>
+                    <input type="text" class="lastnamebox" id="last_name">
+                    <p class="error" id="erroroflastname">This field is required</p>
+                </div>
+            </div>
+            <label class="email">Email Address</label><br>
+            <input type="text" class="emailwidth" id="email_id"><br>
+            <p class="error" id="errorofemail">Please enter a valid email address</p>
+            <label>Query Type <span class="star">*</span></label>
+            <div class="enquirytype"><!--making both div as flex-->  
+                <div class="general">
+                    <input type="radio" class="flexer" value="generalthing" name="querytype" >
+                    <span class="radiothings">General Enquiry</span>
+                </div>
+                <div class="support">
+                    <input type="radio" class="flexer" value="supportthing" name="querytype">
+                    <span class="supporter">Support Request</span>
+                </div>
+            </div>
+            <p class="error" id="errorofquery">Please select a query type</p>
+            <label>Message<span class="star"> *</span></label><br>
+            <input type="text" class="bigbox" id="message_box">
+            <p class="error" id="errorofmessage">This field is required</p>
+            <div class="checkboxer">
+                <input type="checkbox" class="check" id="tick_box">
+                <p>I consent to being contacted by the team <span class="star"> *</span></p>
+            </div>
+            <p class="error" id="errorofcomment">To submit this form please consent to being contacted</p>
+            <button id="submitbutton">Submit</button>
+        </div>
+        <script>
+    
+    const form = () => {
+        const err_fn = document.getElementById("erroroffirstname");
+        const err_ln = document.getElementById("erroroflastname");
+        const err_email = document.getElementById("errorofemail");
+        const err_message = document.getElementById("errorofmessage");
+        const err_comment = document.getElementById("errorofcomment");
+        const err_query = document.getElementById("errorofquery");
+
+        const fn = document.getElementById("first_name").value.trim();
+        const ln = document.getElementById("last_name").value.trim();
+        const email = document.getElementById("email_id").value.trim();
+        const mb = document.getElementById("message_box").value.trim();
+        const tb = document.getElementById("tick_box");
+        const radios = document.querySelectorAll('input[type="radio"]');
+        const pop = document.getElementById("popupmatter");
+        let isvalue = true;
+        let selectedRadio = false;
+
+        if(fn === ""){
+            err_fn.style.display = "block";
+            document.getElementById("first_name").classList.add("input-error");
+            isvalue = false;
+        } else {
+            err_fn.style.display = "none";
+            document.getElementById("first_name").classList.remove("input-error");
+        }
+
+        if(ln === ""){
+            err_ln.style.display = "block";
+            document.getElementById("last_name").classList.add("input-error");
+            isvalue = false;
+        } else {
+            err_ln.style.display = "none";
+            document.getElementById("last_name").classList.remove("input-error");
+        }
+
+        if (!email.endsWith("@gmail.com")) {
+            err_email.style.display = "block";
+            document.getElementById("email_id").classList.add("input-error");
+            isvalue = false;
+        } else {
+            err_email.style.display = "none";
+            document.getElementById("email_id").classList.remove("input-error");
+        }
+
+        if(mb === ""){
+            err_message.style.display = "block";
+            document.getElementById("message_box").classList.add("input-error");
+            isvalue = false;
+        } else {
+            err_message.style.display = "none";
+            document.getElementById("message_box").classList.remove("input-error");
+        }
+
+        radios.forEach((radio) => {
+            if (radio.checked) {
+                selectedRadio = true;
+            }
+        });
+
+        if (!selectedRadio) {
+            err_query.style.display = "block";
+            isvalue = false;
+        } else {
+            err_query.style.display = "none";
+        }
+
+        if (!tb.checked) {
+            err_comment.style.display = "block";
+            isvalue = false;
+        } else {
+            err_comment.style.display = "none";
+        }
+
+        if (isvalue) {
+            pop.style.display = "block";
+            setTimeout(() => {
+            document.getElementById("popupmatter").style.display = "none";
+        }, 3000);
+        }
+    }
+    document.getElementById("submitbutton").addEventListener("click", form);
+</script>
+
+    </body>
+    
+</html>
