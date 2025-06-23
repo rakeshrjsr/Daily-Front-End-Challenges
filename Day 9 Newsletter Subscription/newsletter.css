@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    background-color: hsl(235, 18%, 26%);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Roboto;
+}
+.outfit{
+    background-color: white;
+    padding: 10px 10px 10px 13px;
+    border-radius: 6px;
+    max-height: 800px;
+}
+.doubledata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+h1{
+    font-size: 40px;
+    width: 90%;
+}
+.flexone, .flextwo, .flexthree{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 0px;
+}
+.emailflex{
+    display: flex;
+    justify-content: space-between;
+}
+.emailbox{
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+    margin: 0px 0px 10px 0px;
+}
+.error{
+    display: none;
+    color: red;
+}
+.emailflex h4{
+    margin-bottom: 5px;
+}
+.butfun{
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+}
+.rightimage{
+    height: 450px;
+    padding: 10px 4px 10px 0px;
+    border-radius: 6px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.inbox{
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px 20px 20px 20px;
+}
+.success{
+    width: 40px;
+    height: 40px;
+}
+.thank{
+    text-align: center;
+    width: 100%;
+    background-color:hsl(234, 29%, 20%) ;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+}
