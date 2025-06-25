@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Age calculator</title>
+        <link href="./age.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit"><!--used to give the overall flex and background-->
+            <div class="overallbody"><!--used to provide the padding-->
+                <div class="dob"><!--here l will use the flex stuff to show three in the same row-->
+                    <div class="day"><!--this is used to show the day and input field along with the flex functionalities as row-->
+                        <label class="labeling">DAY</label><br>
+                        <input type="text" placeholder="DD" class="dayfield">
+                        <p class="error">Give the proper day</p>
+                    </div><!--closing of day-->
+                    <div class="month">
+                        <lable class="labeling">MONTHS</lable><br>
+                        <input type="text" placeholder="MM" class="monthfield">
+                        <p class="error">Give the proper month</p>
+                    </div><!--closing of month-->
+                    <div class="year">
+                        <label class="labeling">YEAR</label><br>
+                        <input type="text" placeholder="YYYY" class="yearfield">
+                        <p class="error">Give the correct year</p>
+                    </div>
+                </div><!--closing of dob-->
+                <div class="linewitharrow">
+                    <hr>
+                    <img src="./age-calculator-app-main/assets/images/icon-arrow.svg" class="arrow">
+                </div>
+                <div class="outputyear">
+                    <div class="y">
+                        <h1 class="dotted">--</h1>
+                        <h1 class="final">years</h1>
+                    </div>
+                    <div class="m">
+                        <h1 class="dotted">--</h1>
+                        <h1 class="final">months</h1>
+                    </div>
+                    <div class="d">
+                        <h1 class="dotted">--</h1>
+                        <h1 class="final">months</h1>
+                    </div>
+                </div>
+            </div><!--closing of overall body-->
+        </div><!--closing of main outfit-->
+    </body>
+</html>
