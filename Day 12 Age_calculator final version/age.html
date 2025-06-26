@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Age calculator</title>
+        <link href="./age.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit"><!--used to give the overall flex and background-->
+            <div class="overallbody"><!--used to provide the padding-->
+                <div class="dob"><!--here l will use the flex stuff to show three in the same row-->
+                    <div class="day"><!--this is used to show the day and input field along with the flex functionalities as row-->
+                        <label class="labeling" id="redfont_day">DAY</label><br>
+                        <input type="text" placeholder="DD" class="dayfield" id="user_day">
+                        <p class="error" id="err_ofday">Give the proper day</p>
+                    </div><!--closing of day-->
+                    <div class="month">
+                        <lable class="labeling" id="redfont_month">MONTHS</lable><br>
+                        <input type="text" placeholder="MM" class="monthfield" id="user_month">
+                        <p class="error" id="err_ofmonth">Give the proper month</p>
+                    </div><!--closing of month-->
+                    <div class="year">
+                        <label class="labeling" id="redfont_year">YEAR</label><br>
+                        <input type="text" placeholder="YYYY" class="yearfield" id="user_year">
+                        <p class="error" id="err_ofyear">Give the correct year</p>
+                    </div>
+                </div><!--closing of dob-->
+                <div class="linewitharrow">
+                    <hr>
+                    <img src="./age-calculator-app-main/assets/images/icon-arrow.svg" class="arrow" onclick="calculate()" id="arr">
+                </div>
+                <div class="outputyear">
+                    <div class="y">
+                        <h1 class="dotted">--</h1>
+                        <h1 class="final">years</h1>
+                    </div>
+                    <div class="m">
+                        <h1 class="dotted">--</h1>
+                        <h1 class="final">months</h1>
+                    </div>
+                    <div class="d">
+                        <h1 class="dotted">--</h1>
+                        <h1 class="final">day</h1>
+                    </div>
+                </div>
+            </div><!--closing of overall body-->
+        </div><!--closing of main outfit-->
+    </body>
+<script>
+window.onload = () => {
+    let calculate = () => {
+        document.getElementById("arr").classList.add("arrblack");
+        const inputs = [
+            { id: "user_day", max: 31, errId: "err_ofday" },
+            { id: "user_month", max: 12, errId: "err_ofmonth" },
+            { id: "user_year", max: new Date().getFullYear(), errId: "err_ofyear" }
+        ];
+        //getting every thing from html page to here with the help of array object method and moreover we are using this to skip the repetation of if statements for every field
+        let isValid = true;
+
+        inputs.forEach(input => {
+            const field = document.getElementById(input.id);
+            const value = parseInt(field?.value);
+            const errorElement = document.getElementById(input.errId);
+
+            if (!field || isNaN(value) || value > input.max || value < 1) {
+                errorElement.style.display = "block";
+                field.classList.add("input-error");
+                isValid = false;
+            } else {
+                errorElement.style.display = "none";
+                field.classList.remove("input-error");
+            }
+        });
+
+        if (!isValid) return;
+
+        const day = parseInt(document.getElementById("user_day").value);
+        const month = parseInt(document.getElementById("user_month").value);
+        const year = parseInt(document.getElementById("user_year").value);
+
+        if (!isRealDate(day, month, year)) {
+            alert("❌ Invalid date: Please enter a real calendar date.");
+            document.getElementById("user_day").classList.add("input-error");
+            document.getElementById("user_month").classList.add("input-error");
+            document.getElementById("user_year").classList.add("input-error");
+            document.getElementById("redfont_day").classList.add("error-font");
+            document.getElementById("redfont_month").classList.add("error-font");
+            document.getElementById("redfont_year").classList.add("error-font");
+            return;
+        }
+
+        // Remove error styles if date is valid
+        document.getElementById("user_day").classList.remove("input-error");
+        document.getElementById("user_month").classList.remove("input-error");
+        document.getElementById("user_year").classList.remove("input-error");
+        document.getElementById("redfont_day").classList.remove("error-font");
+        document.getElementById("redfont_month").classList.remove("error-font");
+        document.getElementById("redfont_year").classList.remove("error-font");
+
+        const today = new Date();
+        const birthDate = new Date(year, month - 1, day);
+
+        let ageYears = today.getFullYear() - birthDate.getFullYear();
+        let ageMonths = today.getMonth() - birthDate.getMonth();
+        let ageDays = today.getDate() - birthDate.getDate();
+
+        if (ageDays < 0) {
+            ageMonths -= 1;
+            const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+            ageDays += prevMonth.getDate();
+        }
+
+        if (ageMonths < 0) {
+            ageYears -= 1;
+            ageMonths += 12;
+        }
+
+        document.querySelector(".outputyear .y .dotted").textContent = ageYears;
+        document.querySelector(".outputyear .m .dotted").textContent = ageMonths;
+        document.querySelector(".outputyear .d .dotted").textContent = ageDays;
+    };
+
+    // Helper function to check real calendar date
+    function isRealDate(d, m, y) {
+        const date = new Date(y, m - 1, d);
+        return (
+            date.getFullYear() === y &&
+            date.getMonth() === m - 1 &&
+            date.getDate() === d
+        );
+    }
+
+    // Make calculate() available globally for inline onclick
+    window.calculate = calculate;
+};
+</script>
+
+</html>

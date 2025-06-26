@@ -1,0 +1,95 @@
+body{
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: poppins;
+}
+.outfit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    border-bottom-right-radius: 20%;
+    max-width: 700px;
+    padding: 20px 20px 20px 20px;
+}
+.dob{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.labeling{
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: hsl(0, 1%, 44%);
+    font-size: 13px;
+}
+.dayfield, .monthfield, .yearfield{
+    width: 125px;
+    height: 35px;
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 6px;
+    border-color: hsl(0, 1%, 44%);
+    color: hsl(0, 1%, 44%);
+}
+.linewitharrow{
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    border: 1px solid hsl(0, 1%, 44%);
+    width: 90%;
+}
+.arrow{
+    background-color:hsl(259, 100%, 65%);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    padding: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+.y, .m, .d{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.dotted{
+    font-size: 70px;
+    color: hsl(259, 100%, 65%);
+}
+.final{
+    font-size: 70px;
+}
+.dotted, .final {
+    margin: 0;/*The new thing that I got to know here is if I give 0px this will not set my problem I should give only 0 to eliminate unwated margin*/
+    line-height: 1; /* Optional: to tighten the spacing */
+}
+.error{
+    color: red;
+    margin-top: 3px;
+    font-size: 12px;
+    display: none;
+}
+.input-error {
+    border: 2px solid red !important;
+}
+.error-font{
+    color: red;
+}
+.arrblack{
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    padding: 10px;
+    height: 30px;
+    cursor: pointer;
+}
