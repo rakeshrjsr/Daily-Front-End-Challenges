@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Trending news</title>
+        <link href="./trending.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit">
+        <div class="headingbar"><!--here I will give the flex functionality to show h1 and navtag in the same place-->
+            <img src="./news-homepage-main/assets/images/logo.svg" class="logoofpage">
+            <div class="navtag"><!--here I will make every thing as flex so we can get them in order-->
+                <p>Home</p>
+                <p>New</p>
+                <p>Popular</p>
+                <p>Trending</p>
+                <p>Categories</p>
+            </div><!--closing of nav div tag-->
+        </div><!--closing of heading bar nav tag-->
+        <div class="mainpart"><!--here I will introduce right side and left side and make this as a flex -->
+            <div class="leftpart"><!--here I will give flex:column to show the image and other things in the order-->
+                <div class="imager">
+                    <img src="./news-homepage-main/assets/images/image-web-3-desktop.jpg" class="main_image" />
+                </div><!--closing of imager div tag-->
+                <div class="middlepart"><!--In this I will introuduce flex:as row to show both content and other stuff next to each other-->
+                    <div class="middleheader">
+                        <h1 class="headingpart">The Bright <br>Future of<br>Web 3.0</h1>
+                    </div>
+                    <div class="buttext"><!--this is having flex row functionality-->
+                        <p class="phead">We dive into the next evolution of the web that <br>claims to put the power of the platforms back<br>into the hands of the people. But is it really<br>fulfilling its promise?</p>
+                        <button class="but">Read More</button>
+                    </div>
+                </div><!--closing of middle part-->
+            </div><!--closing of right part div tag-->
+            <div class="rightpart">
+                <div class="insideleft">
+                    <h1 class="headinleft">New</h1>
+                    <h4 class="whitefont">Hydrogen VS Electric Cars</h4>
+                    <p>Will hydrogen-fueled cars ever catch up to<br>EVs?</p>
+                    <hr>
+                    <h4 class="whitefont">The Downsides of AI Artistry</h4>
+                    <p>What are the possible adverse effects of<br>on-demand AI image generation?</p>
+                    <hr>
+                    <h4 class="whitefont">Is VC Funding Drying Up?</h4>
+                    <p>Private funding by VC firms is down 50%<br>YOY. We take a look at what that means.</p>
+                </div><!--closing of insideleft-->
+            </div><!--closing of left part-->
+        </div><!--closing of main part div tag-->
+        <div class="threebox"><!--giving flex as row-->
+            <div class="boxone">
+                <div class="imageinbox">
+                    <img src="./news-homepage-main/assets/images/image-retro-pcs.jpg" class="boximager">
+                </div>
+                <div class="boxmatter">
+                    <h2>01</h2>
+                    <h4>Reviving Retro PCs</h4>
+                    <p>What happends when old PCs<br>are given modern upgrades?</p>
+                </div>
+            </div>
+            <div class="boxtwo">
+                <div class="imageinboxtwo">
+                    <img src="./news-homepage-main/assets/images/image-top-laptops.jpg" class="boximager">
+                </div>
+                <div class="boxmatter">
+                    <h2>02</h2>
+                    <h4>Top 10 Laptos of 2022</h4>
+                    <p>Our best picks for various<br>needs and budgets.</p>
+                </div>
+            </div>
+            <div class="boxthree">
+                <div class="imageinboxthree">
+                    <img src="./news-homepage-main/assets/images/image-gaming-growth.jpg" class="boximager">
+                </div>
+                <div class="boxmatter">
+                    <h2>03</h2>
+                    <h4>The Growth of Gaming</h4>
+                    <p>How the pandemic has sparked<br>fresh oppurtunites</p>
+                </div>
+            </div>
+        </div><!--closing of three box-->
+        </div><!--closing of outfit-->
+    </body>
+</html>

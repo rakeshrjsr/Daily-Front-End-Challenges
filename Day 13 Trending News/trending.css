@@ -1,0 +1,111 @@
+body{
+    margin: 20px 300px 20px 300px;
+    background-color: hsl(36, 100%, 99%);
+    height: 100vh;
+    font-family: Inter;
+}
+.headingbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.navtag{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    color: grey;
+}
+.main_image{
+    width: 100%;
+    margin-right: 0;
+    width: 600px;
+    height: 225px;
+    object-fit: cover;
+}
+.mainpart{
+    display: flex;
+    gap: 30px;
+    max-height: 550px;
+}
+.middlepart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.headingpart{
+    font-size: 40px;
+}
+.leftpart{
+    margin-bottom: 20px;
+    max-height: 550px;
+}
+.phead{
+    color: grey;
+    margin-top: 0;
+}
+.but{
+    background-color:hsl(5, 85%, 63%);
+    color: white;
+    margin-top: 0;
+    padding: 10px 15px 10px 15px;
+    letter-spacing: 2px;
+    border: none;
+}
+.insideleft{
+    background-color:hsl(240, 100%, 5%);
+    padding: 2px 10px 7px 10px;
+    border: none;
+}
+.headinleft{
+    color: hsl(35, 77%, 62%);
+}
+.whitefont{
+    color: white;
+}
+.insideleft p,.boxmatter p{
+    color: grey;
+    font-size: 12px;
+}
+.threebox{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 400px;
+}
+.boximager{
+    width: 100px;
+    height: auto;
+}
+.boxone, .boxtwo, .boxthree{
+    display: flex;
+    gap: 5px; 
+    margin-right: 0;
+    align-items: center;
+}
+.boxmatter{
+    width: 210px;
+}
+.boxmatter h4{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.boxmatter h2{
+    color:hsl(5, 85%, 63%);
+}
+.boxmatter h4:hover,.navtag p:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.insideleft h4:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+hr{
+    border: 1px solid grey;
+}
+.but:hover{
+    background-color:hsl(240, 100%, 5%);
+    cursor: pointer;
+}
