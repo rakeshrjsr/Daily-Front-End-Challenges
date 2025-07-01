@@ -1,0 +1,102 @@
+body{
+    background-color: hsl(211, 68%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+    height: 100vh;
+}
+.profilepic{
+    width: 50px;
+    height: 50px;
+}
+.outfit{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    padding: 15px 15px 15px 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.headingpart{
+    display: flex;
+    justify-content: space-between;
+}
+.headingpart h3{
+    font-weight: bolder;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.headingpart p{
+     color: hsl(219, 12%, 42%);
+}
+.boxer, .mesfour, .mesfive, .messix, .messeven{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nospacer{
+    margin-top: 0;
+}
+.boxer{
+    background-color: hsl(205, 33%, 90%);
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mesfour, .mesfive, .messix, .messeven{
+    padding-left: 10px;
+    margin-left: 10px;
+}
+  .dot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+.messages p{
+    color: grey;
+}
+.bolder{
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.bolder_grey{
+    color: hsl(219, 12%, 42%);
+    font-weight: bolder;
+    font-size: 16px;
+}
+.hiddenmes{
+    margin-top: 5px;
+    border: 2px solid grey;
+    padding: 3px 5px 3px 5px;
+    margin-left: 83px;
+    margin-right: 13px;
+    border-radius: 3px;
+}
+.chess{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: auto;
+    padding-right: 15px;
+}
+.blue{
+    color: hsl(219, 85%, 26%);
+    font-weight: bolder;
+}
+.marked:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+.styling{
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+}
