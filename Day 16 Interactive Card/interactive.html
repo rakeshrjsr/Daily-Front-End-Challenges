@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Interactive Card</title>
+        <link href="interactive.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit">
+            <div class="leftside">
+                <img src="./interactive-card-details-form-main/images/bg-card-front.png" class="front">
+                <img src="./interactive-card-details-form-main/images/bg-card-back.png" class="back">
+            </div><!--closure for leftside-->
+            <div class="rightside"><!--making everythign as white in background-->
+                <div class="matterinright"><!--giving display flex and set it as center within in the max width-->
+                    <label>CARDHOLDER NAME</label><br>
+                    <input type="text" class="field" placeholder="Name of user"><br>
+                    <p class="error">Give the valid name</p>
+                    <label>CARD NUMBER</label><br>
+                    <input type="text" class="field" placeholder="Number on card"><br>
+                    <p class="error">Wrong format, numbers only</p>
+                    <div class="flexingone">
+                        <div class="insideflex"><!--dispaly as flex-->
+                              <label>EXP. DATA(MM/YY)</label><br>
+                            <input type="text" class="fieldm" placeholder="MM">
+                            <input type="text" class="fieldm" placeholder="YY">
+                            <p class="error">Can't be error</p>
+                        </div><!--closure of insideflex-->
+                        <div class="cvc">
+                            <label>CVC</label><br>
+                            <input type="text" class="fieldc" placeholder="e.g..123">
+                            <p class="error">Can't be blank</p>
+                        </div>
+                    </div><!--closure of flexingone-->
+                    <button onclick="check()" class="butfun">Confirm</button> 
+                </div><!--closure of mattern=inright-->
+                 <div class="hider">
+                        <img src="./interactive-card-details-form-main/images/icon-complete.svg" class="success">
+                        <h2>Thank You</h2>
+                        <p>We've added your card details</p>
+                        <button class="sucbut">Continue</button>
+                    </div>
+            </div><!--closure of right side-->
+        </div><!--closure of outfit-->
+    </body>
+</html>
