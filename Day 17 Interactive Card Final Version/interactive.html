@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Interactive Card</title>
+        <link href="interactive.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit">
+            <div class="leftside">
+                <img src="./interactive-card-details-form-main/images/bg-card-front.png" class="front">
+                <div class="card-container">
+                    <img src="./interactive-card-details-form-main/images/card-logo.svg" class="logo">
+                    <p class="card-number" id="number">0000 0000 0000 0000</p>
+                    <div class="nameex">
+                        <p class="card-name" id="visible_month">Jane Appleseed</p>
+                        <p class="card-expiry" id="visible_year">00/00</p>
+                    </div>
+                </div>
+                <img src="./interactive-card-details-form-main/images/bg-card-back.png" class="back">
+            </div><!--closure for leftside-->
+            <div class="rightside"><!--making everythign as white in background-->
+                <div class="matterinright"><!--giving display flex and set it as center within in the max width-->
+                    <label>CARDHOLDER NAME</label><br>
+                    <input type="text" class="field" id="name" placeholder="Name of user"><br>
+                    <p class="nameoferror">Give the valid name</p>
+                    <label>CARD NUMBER</label><br>
+                    <input type="text" class="field ofcard" id="numberofcard" placeholder="Number on card"><br>
+                    <p class="error">Wrong format, numbers only</p>
+                    <div class="flexingone">
+                        <div class="insideflex"><!--dispaly as flex-->
+                              <label>EXP. DATA(MM/YY)</label><br>
+                            <input type="text" class="fieldm ofcard" placeholder="MM" id="month">
+                            <p class="error">Can't be error</p>
+                            <input type="text" class="fieldm ofcard" placeholder="YY" id="year">
+                            <p class="error">Can't be error</p>
+                        </div><!--closure of insideflex-->
+                        <div class="cvc">
+                            <label>CVC</label><br>
+                            <input type="text" class="fieldc ofcard" placeholder="e.g..123">
+                            <p class="error">Can't be blank</p>
+                        </div>
+                    </div><!--closure of flexingone-->
+                    <button onclick="check()" class="butfun">Confirm</button> 
+                </div><!--closure of mattern=inright-->
+                 <div class="hider">
+                        <img src="./interactive-card-details-form-main/images/icon-complete.svg" class="success">
+                        <h2>Thank You</h2>
+                        <p>We've added your card details</p>
+                        <button class="sucbut" id="conti">Continue</button>
+                    </div>
+            </div><!--closure of right side-->
+        </div><!--closure of outfit-->
+    </body>
+    <script>
+       const nameInput = document.getElementById('name');
+       const cardName = document.querySelector('.card-name');
+       const usergiven_number = document.getElementById("numberofcard");
+       const usergiven_month = document.getElementById("month");
+       const usergiven_year = document.getElementById("year");
+       const output_number = document.getElementById("number");
+       nameInput.addEventListener('input', () => {
+        if(nameInput.value.length>16) nameInput.value = nameInput.value.slice(0,16);
+        cardName.textContent = nameInput.value;
+       });
+       usergiven_number.addEventListener("input", () => {
+        let raw = usergiven_number.value.replace(/\D/g, ""); // remove non-digits
+        if (raw.length > 16) raw = raw.slice(0, 16);  
+        let formatted = raw.match(/.{1,4}/g)?.join(" ") || ""; // group every 4 digits
+        usergiven_number.value = formatted;
+        output_number.textContent = formatted;
+        });
+        const output_expiry = document.getElementById("visible_year");
+            usergiven_month.addEventListener("input", () => {
+            usergiven_month.value = usergiven_month.value.slice(0, 2);
+            output_expiry.textContent = `${usergiven_month.value}/${usergiven_year.value}`;
+        });
+            usergiven_year.addEventListener("input", () => {
+            usergiven_year.value = usergiven_year.value.slice(0, 2);
+            output_expiry.textContent = `${usergiven_month.value}/${usergiven_year.value}`;
+        });
+
+       let check = () =>{
+        let nameofuser = document.getElementById("name").value.trim();
+        let err_name = document.querySelector(".nameoferror");
+        let isvalue = true;
+        if (nameofuser === ""){
+            err_name.style.display = "block";
+            document.getElementById("name").classList.add("boxerror");
+            isvalue = false;
+        }
+        else{
+            err_name.style.display = "none";
+            document.getElementById("name").classList.remove("boxerror");
+        }
+        //as of now we are checking only the name tag
+        let fields = document.querySelectorAll(".ofcard");
+        let err_des = document.querySelectorAll(".error");
+        fields.forEach((item,index)=>{
+            let number = parseFloat(item.value.trim());
+            if (isNaN(number)){
+                err_des[index].style.display = "block";
+                fields[index].classList.add("boxerror");// I should give fields index it means in a field with the corresponding index the classlist will get added.
+                isvalue =false;
+            }
+            else{
+                err_des[index].style.display = "none";
+                fields[index].classList.remove("boxerror");
+            }
+        });
+        if (isvalue){
+            document.querySelector(".hider").style.display = "block";
+            document.querySelector(".matterinright").style.display = "none";
+        }
+        else{
+            document.querySelector(".hider").style.display = "none";
+            document.querySelector(".matterinright").style.display = "block";
+        }
+        const continueBtn = document.getElementById("conti");
+        continueBtn.addEventListener("click", () => {
+        // Hide thank-you message and show form again
+        document.querySelector(".hider").style.display = "none";
+        document.querySelector(".matterinright").style.display = "block";
+        // Clear input fields
+        document.getElementById("name").value = "";
+        document.getElementById("numberofcard").value = "";
+        document.getElementById("month").value = "";
+        document.getElementById("year").value = "";
+        // Reset preview values
+        document.querySelector(".card-name").textContent = "Jane Appleseed";
+        document.getElementById("number").textContent = "0000 0000 0000 0000";
+        document.getElementById("visible_year").textContent = "00/00";
+    });
+
+       }
+    </script>
+</html>
