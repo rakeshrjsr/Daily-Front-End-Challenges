@@ -1,0 +1,126 @@
+body{
+    background-color: hsl(0, 0%, 98%);
+    height: 100vh;
+    margin: 5px 30px 20px 15px;
+    font-family:Epilogue;
+
+}
+.flex-nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo{
+    width: 80px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.navitems{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 40px;
+    font-size: 16px;
+    color: hsl(0, 0%, 41%);
+    margin-top: 0;
+    cursor: pointer;
+}
+.authentication{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: auto;
+    color: hsl(0, 0%, 41%);
+    font-size: 16px;
+    cursor: pointer;
+}
+.register{
+    border: 2px solid hsl(0, 0%, 41%);
+    padding: 8px 10px 8px 10px;
+    border-radius: 8px;
+}
+.outfit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.client{
+    height: auto;
+    width: 100px;
+}
+.main_image{
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+.headingofpage{
+    font-size: 70px;
+}
+.contentinpage{
+    color:hsl(0, 0%, 41%) ;
+    margin-bottom: 20px;
+}
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+.but{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.list{
+    z-index: 10;
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+    top: 60px;
+    margin: 0;
+    display: none;
+}
+.small{
+    width: 14px;
+    height: 14px;
+}
+.abs{
+    position: relative;
+}
+.abstwo{
+    position: relative;
+    margin-left: -25px;
+    margin-right: 0;
+}
+.listofcompany{
+    z-index: 10;
+    position: absolute;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+    top: 60px;
+    left: 300px;
+    font-size: 14px;
+    display: none;
+}
+.mar{
+    margin-left: -20px;
+}
+.navitems p:hover{
+    color: black;
+}
+.arrowdown{
+    display: block;
+    margin: 0;
+}
