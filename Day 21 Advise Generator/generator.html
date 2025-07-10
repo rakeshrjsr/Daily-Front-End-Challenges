@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Advice Generator</title>
+        <link href="./generator.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit">
+            <div class="indata">
+                <p class="advice_number">Here you can see the advice number</p>
+            <p class="mainadvice">"the main data will be shown here"</p>
+            <img src="./advice-generator-app-main/images/pattern-divider-desktop.svg" class="divider">
+            </div>
+            <div class="dice">
+                <img src="./advice-generator-app-main/images/icon-dice.svg" class="position">
+        </div>
+        </div>
+    </body>
+    <script>
+        let num = document.querySelector(".advice_number");
+        let main_data = document.querySelector(".mainadvice");
+        let dice = document.querySelector(".dice");
+        getadvice();//here I am giving this to intially show some advice when the page load itself without waiting for the user click
+        async function getadvice() {//here I am using async function because this will allow us to wait for things that take time, like fetching data from an API and I am using cache because when I call it again the API might return the same data, which feels like it did not working - until l click again so by giving this I am saying like dont use the cached data
+            try{
+            const response = await fetch("https://api.adviceslip.com/advice",{cache: "no-cache"});
+            const data = await response.json();
+            num.textContent = `ADVICE # ${data.slip.id}`;
+            main_data.textContent = `"${data.slip.advice}"`;
+            }
+        catch(error){
+            main_data.textContent = "Oops! there is an issue with loading of data. Try one more time"
+        }
+    }
+    dice.addEventListener("click",getadvice);
+    </script>
+</html>
