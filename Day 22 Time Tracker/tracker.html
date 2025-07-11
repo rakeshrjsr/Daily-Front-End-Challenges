@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Time Tracker</title>
+        <link href="./tracker.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit">
+            <div class="leftside"><!--I will set the width of this to either 500 to 600 px-->
+                <div class="twoparts">
+                    <div class="upperpart">
+                        <img src="./time-tracking-dashboard-main/images/image-jeremy.png" class="avatar">
+                        <p> Report for</p>
+                        <h2>Jeremy<br>Robson</h2>
+                    </div>
+                    <div class="lowerpart">
+                        <p onclick="daily()">Daily</p>
+                        <p onclick="weekly()">Weekly</p>
+                        <p onclick="monthly()">Monthly</p>
+                    </div>
+                </div><!--closure of two parts-->
+            </div><!--closure of leftside-->
+            <div class="rightside">
+                <div class="rowone">
+                    <div class="box_one">
+                    <div class="boxone"><!--I may use flex column here-->
+                        <div class="imager">
+                        <img src="./time-tracking-dashboard-main/images/icon-work.svg" class="imageright">
+                        </div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Work</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours">32 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week <span class="totalhour">36 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxone-->
+                    </div>
+                    <div class="box_two">
+                    <div class="boxtwo"><!--I may use flex column here-->
+                        <div class="imager_play">
+                        <img src="./time-tracking-dashboard-main/images/icon-play.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Play</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours">10 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">8 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwo-->
+                    </div>
+                    <div class="box_three">
+                    <div class="boxthree"><!--I may use flex column here-->
+                        <div class="imager_study">
+                        <img src="./time-tracking-dashboard-main/images/icon-study.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Play</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours">4hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">7 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                    </div><!--closure of boxthree-->
+                    </div>
+                    </div>
+                </div><!--closure of rowone-->
+                 <div class="rowtwo">
+                    <div class="box_two_one">
+                    <div class="boxtwoone"><!--I may use flex column here-->
+                        <div class="imager_exercise">
+                        <img src="./time-tracking-dashboard-main/images/icon-exercise.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Exercise</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours">4hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">5 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwoone-->
+                    </div>
+                    <div class="box_two_two">
+                    <div class="boxtwotwo"><!--I may use flex column here-->
+                        <div class="imager_social">
+                        <img src="./time-tracking-dashboard-main/images/icon-social.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Social</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours">5hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">10 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwotwo-->
+                    </div>
+                    <div class="box_two_three">
+                    <div class="boxtwothree"><!--I may use flex column here-->
+                        <div class="imager_self">
+                        <img src="./time-tracking-dashboard-main/images/icon-self-care.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Self Care</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours">2hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">2 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwothree-->
+                    </div>
+                </div><!--closure of rowtwo-->
+            </div><!--closure of rightside-->
+        </div><!--going to give everything as a flex to set both of them left and right-->
+    </body>
+</html>
