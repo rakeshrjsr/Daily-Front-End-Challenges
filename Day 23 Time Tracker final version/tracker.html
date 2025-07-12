@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <title>Time Tracker</title>
+        <link href="./tracker.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="outfit">
+            <div class="leftside"><!--I will set the width of this to either 500 to 600 px-->
+                <div class="twoparts">
+                    <div class="upperpart">
+                        <img src="./time-tracking-dashboard-main/images/image-jeremy.png" class="avatar">
+                        <p> Report for</p>
+                        <h2>Jeremy<br>Robson</h2>
+                    </div>
+                    <div class="lowerpart">
+                        <p onclick="daily()">Daily</p>
+                        <p onclick="weekly()">Weekly</p>
+                        <p onclick="monthly()">Monthly</p>
+                    </div>
+                </div><!--closure of two parts-->
+            </div><!--closure of leftside-->
+            <div class="rightside">
+                <div class="rowone">
+                    <div class="box_one">
+                    <div class="boxone timer"><!--I may use flex column here-->
+                        <div class="imager">
+                        <img src="./time-tracking-dashboard-main/images/icon-work.svg" class="imageright">
+                        </div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Work</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours time">00 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week <span class="totalhour">00 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxone-->
+                    </div>
+                    <div class="box_two">
+                    <div class="boxtwo timer"><!--I may use flex column here-->
+                        <div class="imager_play">
+                        <img src="./time-tracking-dashboard-main/images/icon-play.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Play</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours time">00 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">00 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwo-->
+                    </div>
+                    <div class="box_three">
+                    <div class="boxthree timer"><!--I may use flex column here-->
+                        <div class="imager_study">
+                        <img src="./time-tracking-dashboard-main/images/icon-study.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Study</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours time">00 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">00 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                    </div><!--closure of boxthree-->
+                    </div>
+                    </div>
+                </div><!--closure of rowone-->
+                 <div class="rowtwo">
+                    <div class="box_two_one">
+                    <div class="boxtwoone timer"><!--I may use flex column here-->
+                        <div class="imager_exercise">
+                        <img src="./time-tracking-dashboard-main/images/icon-exercise.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Exercise</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours time">00 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">00 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwoone-->
+                    </div>
+                    <div class="box_two_two">
+                    <div class="boxtwotwo timer"><!--I may use flex column here-->
+                        <div class="imager_social">
+                        <img src="./time-tracking-dashboard-main/images/icon-social.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Social</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours time">00 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">00 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwotwo-->
+                    </div>
+                    <div class="box_two_three">
+                    <div class="boxtwothree timer"><!--I may use flex column here-->
+                        <div class="imager_self">
+                        <img src="./time-tracking-dashboard-main/images/icon-self-care.svg" class="imageright"></div>
+                        <div class="inbox">
+                        <div class = "inline"><!--Here l will use block inline or flex as row-->
+                            <p>Self Care</p>
+                            <img src="./time-tracking-dashboard-main/images/icon-ellipsis.svg" class="dots">
+                        </div><!--closure of inline-->
+                        <h3 class="work_hours time">00 hrs</h3>
+                        <div class="inlinetwo">
+                            <p class="colors">Last week - <span class="totalhour">00 hrs</span></p>
+                        </div><!--closure of inlinetwo-->
+                        </div>
+                    </div><!--closure of boxtwothree-->
+                    </div>
+                </div><!--closure of rowtwo-->
+            </div><!--closure of rightside-->
+        </div><!--going to give everything as a flex to set both of them left and right-->
+    </body>
+    <script defer>
+        try{
+        fetch("./data.json")//l am fetching the .json file
+        .then(response=>response.json())// then we already got this file into the response then we are turning that file into .json mode
+        .then(data =>{//then this is having the data and now we are dealing with them
+            //so now what we have to give 3 functions for daily, monthly, and weekly
+            window.daily = () =>{// this function is for daily l mean if user click on the daily this function will get run
+                //get all the boxes with queryselector all 
+                let boxes_ofeach = document.querySelectorAll(".timer");//this is having all boxes in a node list l mean the box related to work, the box related to study, the box related to exercise, the box related to self care etc
+                //so now what we have to do means based on the boxes_ofeach we need to write the foreach() method that means we are dealing with each box content 
+                boxes_ofeach.forEach((box_offield,index_offield)=>{// here what is happening means just imagine the boxes_ofeach is having all boxes because of for each method here 1st it will triggers to the box which is leading to work box and it will be in the box_offield with index 0 like that for every other stuff
+                    //now we have to deal with the dynamic data that should be change in the box so now just give the statement like this
+                    const present_hrs = box_offield.querySelector(".time");//so this is pointing to the thing work with index 0 so the present_hrs is going to store the value that pointing element had
+                    present_hrs.textContent = `${data[index_offield].timeframes.daily.current} hrs`;
+                    //now we are successfully changing the matter that is realted to daily of present stuff 
+                    //now we have to do the previous stuff for that we have to declare and then reflect it 
+                    const previous_hrs = box_offield.querySelector(".totalhour");
+                    previous_hrs.textContent = `${data[index_offield].timeframes.daily.previous}hrs`;
+                })
+            }
+            window.monthly = () =>{//as like we do for the monthly thing 
+                let boxes_ofeach = document.querySelectorAll(".timer");
+                boxes_ofeach.forEach((box_offield,index_offield)=>{
+                    const present_hrs_monthly = box_offield.querySelector(".time");
+                    present_hrs_monthly.textContent = `${data[index_offield].timeframes.monthly.current} hrs`;
+                    const previous_hrs_monthly = box_offield.querySelector(".totalhour");
+                    previous_hrs_monthly.textContent = `${data[index_offield].timeframes.monthly.previous} hrs`;
+                })
+            }
+            window.weekly = () =>{
+                let boxes_ofeach = document.querySelectorAll(".timer");
+                boxes_ofeach.forEach((box_offield,index_offield)=>{
+                    const present_hrs_weekly = box_offield.querySelector(".time");
+                    present_hrs_weekly.textContent = `${data[index_offield].timeframes.weekly.current} hrs`;
+                    const previous_hrs_weekly = box_offield.querySelector(".totalhour");
+                    previous_hrs_weekly.textContent = `${data[index_offield].timeframes.weekly.previous} hrs`
+                })
+            }
+        });
+        }
+        catch(error){
+            console.log("failer to load the json file",error);
+        }
+
+    </script>
+</html>

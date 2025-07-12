@@ -1,0 +1,123 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Rubik;
+    background-color: hsl(226, 43%, 10%);
+}
+.outfit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+.avatar{
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.upperpart{
+    background-color: hsl(246, 80%, 60%);
+    border: none;
+    border-radius: 8px;
+    padding: 20px 80px 50px 18px;
+}
+.upperpart p{
+    color: grey;
+}
+.upperpart h2{
+    color: white;
+    font-weight: 200;
+    line-height: 25px;
+}
+.lowerpart{
+    background-color:hsl(235, 46%, 20%);
+    padding: 20px 80px 10px 18px;
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color:hsl(235, 45%, 61%) ;
+}
+.rightside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rowone, .rowtwo{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 750px;
+}
+.imageright{
+    width: 40px;
+    height: 40px;
+    margin-left: 200px;
+}
+.boxone,.boxtwo,.boxthree,.boxtwoone, .boxtwotwo, .boxtwothree{
+    width: 250px;
+}
+.inbox{
+    color: white;
+    background-color:hsl(235, 46%, 20%);
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius:8px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 10px;
+}
+.inline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.work_hours{
+    font-weight: 200;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.imager,.imager_play, .imager_study, .imager_exercise, .imager_social, .imager_self{
+    width: 250px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.box_one{
+    background-color:hsl(15, 100%, 70%);
+    border-radius: 12px;
+}
+.box_two{
+    background-color: hsl(195, 74%, 62%);
+    border-radius: 12px;
+}
+.box_three{
+    background-color: hsl(348, 100%, 68%);
+    border-radius: 12px;
+}
+.box_two_one{
+    background-color: hsl(145, 58%, 55%);
+    border-radius:12px;
+}
+.box_two_two{
+    background-color: hsl(264, 64%, 52%);
+    border-radius:12px;
+}
+.box_two_three{
+    background-color: hsl(43, 84%, 65%);
+    border-radius: 12px;
+}
+.lowerpart p:hover{
+    cursor: pointer;
+    color: white;
+}
+.colors{
+    color:hsl(236, 100%, 87%);
+}
+.inbox:hover{
+ background-color: hsl(235, 46%, 20%); 
+ cursor: pointer;  
+}
