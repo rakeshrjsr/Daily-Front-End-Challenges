@@ -1,0 +1,141 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:hsl(185, 41%, 84%);
+    font-family: Space mono ;
+}
+.outfit{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    background-color: hsl(0, 100%, 100%);
+    width: 820px;
+    height: auto;
+    gap: 20px;
+}
+.leftside{
+    width: 400px;
+    padding: 20px 20px 20px 20px;
+}
+.value{
+    border: none;
+    width: 90%;
+    height: 50px;
+    background-color: hsl(189, 47%, 97%);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rowone, .rowtwo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 20px;
+    margin-top: 2px;
+}
+.but{
+    border: none;
+    background-color:hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100px;
+    cursor: pointer;
+}
+.tip_section{
+    margin-left: -15px;
+}
+.special{
+     border: none;
+    background-color:hsl(189, 47%, 97%);
+    color: hsl(184, 14%, 56%);
+    border-radius: 5px;
+    padding: 13px 20px 13px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.people, .billing{
+    background-color: hsl(189, 47%, 97%);
+    height: 50px;
+    padding-left: 10px;
+    width: 90%;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}/*grandparents*/
+/*in this l should not give the flex because this is flex containers so if l give here the things that l give in child will not work*/
+.insidepeople, .insidebill{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*now this is working because I was removed them at top*/
+    padding-top: 5px;
+}/*parents*/
+.era{/*child*/
+    width: 80%;
+    text-align: right;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+}
+.icon{/*child*/
+    width: 25px;
+    height: 25px;
+}
+.era:focus{/*that I learned new today*/
+    border: none;
+    outline: none;/*for this at first then added later*/
+}
+.era::placeholder {/*new thing that I learn today*/
+    color: hsl(184, 14%, 56%); /* Light greyish cyan like your UI */
+    font-family: 'Space Mono', monospace;
+    opacity: 1; /* Ensures full visibility */
+    font-size: 20px;
+}
+.right{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 8px;
+    width: 400px;
+    z-index: 2;
+    padding: 15px 15px 15px 15px;
+}
+.field_one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -60px;
+}
+.person{
+    margin-top: -10px;
+    color: hsl(186, 14%, 43%);
+    font-size: 14px;
+}
+.text{
+    color: white;
+}
+.right_button{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    color: white;
+    background-color: hsl(186, 14%, 43%);
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.right_amount{
+    font-size: 40px;
+    color:hsl(172, 67%, 45%) ;
+}
