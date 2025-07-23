@@ -1,0 +1,163 @@
+.body{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Barlow;
+}
+.home_image{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.nav_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+}
+.main_logo{
+    width: 125px;
+    height: auto;
+    margin: 0 60px 0 10px;
+    margin-left: 20px;
+}
+.navelements{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-left: 160%;
+    gap: 30px;
+}
+.navelements h3{
+    cursor: pointer;
+}
+.special{
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 15px 10px 15px 10px;
+}
+.text_arrow{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 200px;
+    margin-left: 25%;
+    letter-spacing: 8px;
+    font-size: 30px;
+}
+.arrow_inupper{
+    height: 150px;
+    margin-top: 30px;
+}
+.two_blocks, .two_blocks_two{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+.context,.context_two{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.middle{
+    margin: auto;
+}
+.sugar{
+    width: 50%;
+    height: auto;
+}
+.two_images{
+    display: flex;
+    width: 100%;
+    gap: 0px;
+    position:relative;
+}
+.last{
+    width: 50%;
+    height: auto;
+    position: relative
+}
+.overalltext{
+    display: flex;
+    gap: 450px;
+    align-items: center;
+    position: absolute;
+    top: 2500px;
+    margin-left: 230px;
+    text-align: center;
+}
+.clients h2{
+    text-align: center;
+    color: grey;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.client_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.avatar{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+}
+.four_images{
+    display: flex;
+    gap: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+.final_part{
+    background-color: hsl(167, 34%, 41%);
+    text-align: center;
+    margin-top: -20px;
+    padding: 40px 0px 40px 0px;
+    color: hsl(167, 40%, 24%);
+}
+.des{
+    color: gray;
+}
+.four{
+    width: 25%;
+    height: auto;
+}
+.media{
+    width: 20px;
+    height: 20px;
+}
+.social_media{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}
+.items{
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+.learn_one,
+.learn_two {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: hsl(212, 27%, 19%);
+    text-decoration: underline;
+    text-decoration-color: hsl(51, 100%, 49%);
+    cursor: pointer;
+}
