@@ -1,0 +1,251 @@
+body{
+    background-color: whitesmoke;
+    font-family: Commissioner;
+}
+.overall{
+    position: relative;
+}
+.main_image{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.on_image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This spaces .flex_items and .master */
+    color: white;
+}
+.logo_name{
+    width: 100px;
+    height: 26px;
+}
+.flex_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 60px;
+    width: 90%; /* Needed to push .other_nav */
+    top: 30px;/*l should give these two here only not in the top one*/
+    position: absolute;/*l should give these two here only not in the top one*/
+}
+.other_nav{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.master{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    position: absolute;
+    z-index: 3;
+    top: 300px;
+    left: 725px;
+}
+.main_area{
+    max-width: 40%;
+    margin: auto;
+}
+.content_headpart{
+    background-color: white;
+    padding: 30px 20px 25px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 37%;
+    position: absolute;
+    top: 330px;
+    left: 450px;
+}
+.backofproject{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.margin_area{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.bookmark{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.project{
+    background-color:hsl(176, 50%, 47%) ;
+    color: white;
+    border-radius: 30px;
+    padding: 18px 20px 18px 20px;
+    border: none;
+    cursor: pointer;
+}
+.bookmark{
+    background-color: lightgray;
+    border:none;
+    outline: none;
+    overflow: hidden;
+    border-radius: 25px;
+    padding-right: 20px;
+    color:hsl(0, 0%, 48%) ;
+}
+.bookmark_logo{
+    width: 50px;
+    height: 50px;
+}
+.numbers{
+    background-color: white;
+    border:none;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 180px;
+}
+.in_numbers{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.in_numbers hr{
+    border: 1px solid black;
+    rotate: 90deg;
+    width: 110px;
+}
+.in_numbers h1{
+    margin-bottom: 0;
+}
+.in_numbers p{
+    margin-top: 0;
+    color:hsl(0, 0%, 48%);
+}
+.two_in, .three_in{
+    margin-left: -70px;
+}
+.details_of_project{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+}
+.pledge_section{
+    border: 2px solid lightgray;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+.in_pledge{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reward_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stock_amount{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.in_pledge p{
+    color:hsl(176, 50%, 47%);
+}
+.reward_button{
+     background-color:hsl(176, 50%, 47%) ;
+    color: white;
+    border-radius: 30px;
+    padding: 18px 20px 18px 20px;
+    border: none;
+    cursor: pointer;
+}
+.inside_thanks{
+    text-align: center;
+    background-color: white;
+    max-width: 500px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 30px 30px 30px;
+}
+.inside_thanks button{
+    text-align: center;
+    border: none;
+    border-radius: 25%;
+    padding: 12px 10px 12px 10px;
+    color: white;
+    cursor: pointer;
+    background-color: hsl(176, 72%, 28%);
+    width: 20%;
+}
+.thankyou_popup{
+    position: absolute;
+    z-index: 5;
+    top: 240px;
+    left: 500px;
+    height: 100%;
+    display: none;
+}
+.back_project{
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 20px 20px 20px;
+    max-width: 38%;
+    z-index: 4;
+    border: none;
+    top: 300px;
+    left: 460px;
+    position: absolute;
+    display: none;
+}
+.box_one,.box_two,.box_three,.box_four{
+    border: 2px solid hsl(0, 0%, 48%);
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.nomar{
+    margin-bottom: 0;
+}
+.two_items{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.number_left{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+.last_text{
+    margin-left: 32px;
+    margin-top: -5px;
+}
+.color_change_one:hover{
+    color: hsl(176, 50%, 47%);
+    cursor: pointer;
+}
+.color_change{
+    color: hsl(176, 50%, 47%);
+}
+.blur {
+  filter: blur(5px);/*this is new something l have gone through*/
+  pointer-events: none; /* Prevent interaction with background */
+}
+.close{
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    padding: auto; 
+    text-align: center;
+    color: white;
+    background-color: red;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.header_ofproject{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
