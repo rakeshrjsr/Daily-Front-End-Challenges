@@ -1,0 +1,156 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(230, 100%, 99%);
+    height: 100vh;
+    background-image: url("./images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: Manrope;
+}
+.main_data{
+    text-align: center;
+    margin: 0px 0px 80px 0px;
+}
+.in_maindata{
+    background-image: url("./images/pattern-circles.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px 0;
+}
+.in_maindata h1{
+    margin-bottom: 0;
+}
+.main_area{
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 4px 4px 4px 4px solid black;
+    width: 100%;
+}
+.first_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    font-size: 40px;
+    font-weight: 600;
+}
+.page{
+    font-weight: 600;
+    color: hsl(225, 20%, 60%);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.after_slider{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+}
+.discount{
+    background-color:hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    padding: 5px;
+    border-radius: 5px;
+}
+.details_trails{
+    margin: 40px 0px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.check_sign{
+    margin-right: 10px;
+    width: 12px;
+    height: auto;
+}
+.in_features p{
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+}
+.trail_button{
+    text-align: center;
+    border: none;
+    color: hsl(223, 50%, 87%);
+    background-color: hsl(227, 35%, 25%);
+    padding: 18px 32px 18px 32px;
+    border: none;
+    border-radius: 26px;
+}
+.last_line{
+    border-color: 2px solid lightgrey;
+}
+.slider-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(to right, hsl(174, 86%, 45%) 50%, hsl(224, 65%, 95%) 50%);
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Chrome/Edge */
+.slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  background: hsl(174, 86%, 45%) url('./images/icon-slider.svg') no-repeat center;
+  background-size: 50%;
+  border-radius: 50%;
+  box-shadow: 0 15px 30px hsl(174, 77%, 80%);
+  cursor: pointer;
+  margin-top: -16px; /* aligns thumb with bar */
+  z-index: 2;
+  position: relative;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider-round::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider-round {
+  background-color: hsl(174, 86%, 45%);
+}
+
+.switch input:checked + .slider-round::before {
+  transform: translateX(26px);
+}
