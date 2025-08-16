@@ -1,0 +1,87 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./coding-bootcamp-testimonials-slider-master/images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 60%;
+    font-family: Inter;
+}
+.outfit{
+    display: flex;
+    align-items: center;
+    gap: -10px;
+    width: 60%;
+}
+.leftside{
+     background-image: url(./coding-bootcamp-testimonials-slider-master/images/pattern-quotes.svg);
+     background-repeat: no-repeat;
+     display: flex;
+     width: 80%;
+}
+.left{
+    width: 100%;
+    font-size: 24px;
+    padding: 20px;
+    font-weight: 400;
+}
+.name_role{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.name_role p{
+    font-size: 20px;  
+    font-weight: 400;
+    color: hsl(240, 18%, 77%); 
+}
+.rightside{
+    width: 80%;
+}
+.right {
+    position: relative;
+    background-image: url("./coding-bootcamp-testimonials-slider-master/images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* creates space inside the bg */
+    border-radius: 15px;
+    overflow: visible;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.grand{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 26px;
+    bottom: -22px;
+    left: 18px;
+}
+.two_arrows{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+}
+.part_2{
+    display: none;
+}
+.slide {
+  display: none;   /* hide all slides */
+  flex: 1;
+  gap: 20px;
+}
+
+.slide.active {
+  display: flex;   /* show active slide */
+}
